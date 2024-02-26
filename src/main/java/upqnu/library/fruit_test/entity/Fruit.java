@@ -7,7 +7,7 @@ public class Fruit {
     private long id;
     private String name;
     private LocalDate warehousingDate;
-    private long price;
+    private Long price;
     private boolean isSold;
 
     public Fruit(String name, LocalDate warehousingDate, long price) {
