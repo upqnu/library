@@ -1,7 +1,9 @@
 package upqnu.library.fruit_test.repository;
 
+import org.springframework.stereotype.Repository;
 import java.time.LocalDate;
 
+@Repository
 public interface FruitRepository {
 
     public void saveFruitInfo(String name, LocalDate warehousingDate, Long price);

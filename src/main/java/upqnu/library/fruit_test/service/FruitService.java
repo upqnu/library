@@ -1,7 +1,6 @@
 package upqnu.library.fruit_test.service;
 
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.RequestBody;
 import upqnu.library.fruit_test.dto.*;
 import upqnu.library.fruit_test.repository.FruitRepository;
 
@@ -50,7 +49,7 @@ public class FruitService {
         return response;
     }
 
-    public void recordFruitSelling(@RequestBody FruitSellingRequest request) {
+    public void recordFruitSelling(FruitSellingRequest request) {
         if (fruitRepository.findFruit(request.getId())) throw new IllegalArgumentException();
         fruitRepository.findFruitSold(request.getId());
     }

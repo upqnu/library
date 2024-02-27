@@ -1,5 +1,7 @@
 package upqnu.library.fruit_test.dto;
 
+import upqnu.library.fruit_test.entity.Fruit;
+
 import java.time.LocalDate;
 
 public class FruitInfoResponse {
@@ -12,6 +14,13 @@ public class FruitInfoResponse {
         this.name = name;
         this.warehousingDate = warehousingDate;
         this.price = price;
+    }
+
+    public FruitInfoResponse(Fruit fruit) {
+        this.id = fruit.getId();
+        this.name = fruit.getName();
+        this.warehousingDate = fruit.getWarehousingDate();
+        this.price = fruit.getPrice();
     }
 
     public Long getId() {
